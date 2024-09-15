@@ -31,7 +31,7 @@ let index = 0,
 
 // Pipe settings
 let pipeWidth = 100; // Adjust to your pipe image width
-let pipeGap = canvas.height / 5; // Increased gap between pipes
+let pipeGap = canvas.height / 6 // Increased gap between pipes
 
 // Function to determine pipe location
 const pipeLoc = () => {
