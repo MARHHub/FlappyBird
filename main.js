@@ -64,7 +64,7 @@ function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     cTenth = canvas.width / 10; // Update bird position based on new canvas width
-    pipeGap = canvas.height / 3; // Adjust pipe gap based on new canvas height
+    pipeGap = canvas.height / 2.5; // Adjust pipe gap based on new canvas height
 }
 
 // Initial setup
