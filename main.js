@@ -17,7 +17,7 @@ pipeBottom.src = 'columndown.png'; // Your bottom pipe image
 // General settings
 let gamePlaying = false;
 let gravity = 0.5;
-let speed = 5.2;
+let speed = 6.2;
 let birdSize = [51, 36]; // Adjust to your bird image size
 let jump = -11.5;
 let cTenth = canvas.width / 10; // Horizontal position of the bird
@@ -31,7 +31,7 @@ let index = 0,
 
 // Pipe settings
 let pipeWidth = 100; // Adjust to your pipe image width
-let pipeGap = canvas.height / 2; // Increased gap between pipes
+let pipeGap = canvas.height / 5; // Increased gap between pipes
 
 // Function to determine pipe location
 const pipeLoc = () => {
@@ -64,7 +64,7 @@ function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     cTenth = canvas.width / 10; // Update bird position based on new canvas width
-    pipeGap = canvas.height / 3; // Adjust pipe gap based on new canvas height
+    pipeGap = canvas.height / 4; // Adjust pipe gap based on new canvas height
 }
 
 // Initial setup
