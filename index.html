@@ -1,11 +1,47 @@
-<header>
-    <div class="score-container">
-      <div id="bestScore"></div>
-      <div id="currentScore"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird with High Scores</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Supabase JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header>
+        <div class="score-container">
+            <!-- Always visible High Scores button -->
+            <button id="highScoreBtn">High Scores</button>
+        </div>
+    </header>
+  
+    <canvas id="canvas"></canvas>
+    
+    <!-- Start Screen -->
+    <div id="startScreen" class="overlay">
+        <p>Enter Your FULL Name to Start</p>
+        <input type="text" id="playerNameInput" placeholder="Your FULL Name">
+        <button id="startGameBtn">Start Game</button>
     </div>
-  </header>
-  
-  <canvas id="canvas"></canvas>
-   
-  <script src="main.js"></script>
-  
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="overlay hidden">
+        <p>Game Over</p>
+        <p><span id="finalScore"></span></p>
+        <p><span id="playerRank"></span></p>
+        <button id="restartGame">Restart</button>
+        <!-- High Scores button also on Game Over Screen -->
+        <button id="highScoreBtnGameOver">High Scores</button>
+    </div>
+
+    <!-- High Scores Popup -->
+    <div id="highScoresPopup" class="overlay hidden">
+        <h2>High Scores</h2>
+        <ol id="highScores"></ol>
+        <button id="closeHighScores">Close</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
