@@ -1,157 +1,36 @@
-/* General Layout */
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
   margin: 0;
-  padding: 0;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  user-select: none;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 100%;
+  z-index: 1; /* Ensure header stays on top */
+}
+
+h1 {
+  background: url("https://i.ibb.co/Q9yv5Jk/flappy-bird-set.png") 0% 340px;
+  padding: 1.2rem 0; margin: 0;
+}
+
+.score-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #282c34;
-  font-family: 'Arial', sans-serif;
+  justify-content: space-between;
+  padding: 8px 6px;
+  background: #5EE270;
 }
 
 canvas {
   display: block;
-}
-
-/* Overlay styling (common to all popups) */
-.overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
-  z-index: 1000;
-  max-width: 90%;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Start Screen */
-#startScreen input {
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-}
-
-#startScreen button {
-  padding: 10px 20px;
-  background-color: #fda50f;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-#startScreen button:hover {
-  background-color: #ff8900;
-}
-
-/* Game Over Screen */
-#gameOverScreen p {
-  font-size: 28px;
-  margin: 15px 0;
-}
-
-#gameOverScreen p#finalScore {
-  font-size: 24px;
-}
-
-#gameOverScreen button {
-  padding: 12px 25px;
-  background-color: #fda50f;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  color: white;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-}
-
-#gameOverScreen button:hover {
-  background-color: #ff8900;
-}
-
-/* High Scores Button */
-#highScoreBtn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #fda50f;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#highScoreBtn:hover {
-  background-color: #ff8900;
-}
-
-/* High Scores Popup */
-#highScoresPopup {
-  width: 50vw;
-  max-height: 70vh;
-  overflow-y: auto;
-}
-
-#highScoresPopup h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-#highScoresPopup ol {
-  padding: 0;
-  margin: 0;
-  list-style-type: decimal;
-  text-align: left;
-}
-
-#highScoresPopup ol li {
-  font-size: 22px;
-  padding: 5px 0;
-}
-
-#highScoresPopup button {
-  padding: 12px 25px;
-  background-color: #ff4b4b;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  color: white;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-}
-
-#highScoresPopup button:hover {
-  background-color: #e14040;
-}
-
-/* Styling for rank and score in the Game Over screen */
-#finalScore {
-  font-size: 24px;
-  margin-top: 20px;
-}
-
-#playerRank {
-  font-size: 24px;
-  margin-bottom: 20px;
+  /* Position the canvas */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
