@@ -1,7 +1,7 @@
 // Get the canvas and context
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-	@@ -8,180 +13,290 @@ const birdImg = new Image();
+const birdImg = new Image();
 const pipeTop = new Image();
 const pipeBottom = new Image();
 
