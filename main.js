@@ -17,7 +17,7 @@ pipeBottom.src = 'columndown.png'; // Your bottom pipe image
 // General settings
 let gamePlaying = false;
 let gravity = 0.5;
-let speed = 6.2;
+let speed = 6.2; 
 let birdSize = [100, 100]; // Adjust to your bird image size
 let jump = -11.5;
 let cTenth = canvas.width / 10; // Horizontal position of the bird
